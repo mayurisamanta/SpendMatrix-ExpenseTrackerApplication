@@ -1,37 +1,78 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-const DUMMY_EXPENSES = [
+const EXPENSES = [
   {
     id: "e1",
-    title: "Toilet Paper",
-    amount: 94.12,
-    date: new Date(2020, 7, 14),
+    title: "Groceries",
+    amount: 500,
+    date: new Date("2019-01-20"),
   },
   {
     id: "e2",
-    title: "New TV",
-    amount: 799.49,
-    date: new Date(2021, 2, 12),
+    title: "Restaurant",
+    amount: 800,
+    date: new Date("2020-03-15"),
   },
   {
     id: "e3",
-    title: "Car Insurance",
-    amount: 294.67,
-    date: new Date(2021, 2, 28),
+    title: "Shopping",
+    amount: 1200,
+    date: new Date("2021-06-10"),
   },
   {
     id: "e4",
-    title: "New Desk (Wooden)",
-    amount: 450,
-    date: new Date(2021, 5, 12),
+    title: "Utilities",
+    amount: 600,
+    date: new Date("2022-09-05"),
+  },
+  {
+    id: "e5",
+    title: "Vacation",
+    amount: 2500,
+    date: new Date("2023-12-28"),
+  },
+  {
+    id: "e6",
+    title: "Electronics",
+    amount: 1500,
+    date: new Date("2020-08-18"),
+  },
+  {
+    id: "e7",
+    title: "Rent",
+    amount: 2000,
+    date: new Date("2021-02-01"),
+  },
+  {
+    id: "e8",
+    title: "Healthcare",
+    amount: 700,
+    date: new Date("2022-05-15"),
+  },
+  {
+    id: "e9",
+    title: "Entertainment",
+    amount: 300,
+    date: new Date("2023-10-10"),
+  },
+  {
+    id: "e10",
+    title: "Education",
+    amount: 1200,
+    date: new Date("2020-11-22"),
   },
 ];
 
 const App = () => {
-  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
+  useEffect(() => {
+    document.title = 'Spend Matrix'; 
+  }, []);
+
+  const [expenses, setExpenses] = useState(EXPENSES);
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {

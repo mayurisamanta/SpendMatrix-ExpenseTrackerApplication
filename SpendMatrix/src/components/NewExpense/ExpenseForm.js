@@ -17,7 +17,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -36,16 +36,20 @@ const ExpenseForm = (props) => {
             <input
               type="text"
               value={enteredTitle}
+              placeholder="Enter Expense Name"
+              required
               onChange={(event) => {
                 inputChangeHandler("title", event.target.value);
               }}
             />
           </div>
           <div className="new-expense__control">
-            <label>Amount</label>
+            <label>Amount(&#8377;)</label>
             <input
               type="number"
               value={enteredAmount}
+              placeholder="Enter Expense Amount"
+              required
               onChange={(event) => {
                 inputChangeHandler("amount", event.target.value);
               }}
@@ -58,6 +62,7 @@ const ExpenseForm = (props) => {
               value={enteredDate}
               min="2019-01-01"
               max="2023-12-31"
+              required
               onChange={(event) => {
                 inputChangeHandler("date", event.target.value);
               }}

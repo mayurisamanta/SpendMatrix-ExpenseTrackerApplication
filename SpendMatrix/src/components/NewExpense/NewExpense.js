@@ -4,14 +4,16 @@ import "./NewExpense.css";
 
 const NewExpense = (props) => {
   const [isEditing, setIsEditing] = useState(false);
+  const [id, setId] = useState(1);
 
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: Math.random().toString(),
+      id: id,
     };
 
     setIsEditing(false);
+    setId(id + 1);
     props.onAddExpense(expenseData);
   };
 
