@@ -6,7 +6,7 @@
 
 # Table of Contents
 
-- [Overview](#overview)
+- [Overview](#Overview)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -15,9 +15,9 @@
 - [License](#license)
 - [Contact](#contact)
 
-# Overview
-
+# Overview 
 The SpendMatrix - Expense Tracker Application is a React-based web application that allows you to easily manage and track your expenses. With this app, you can add expenses by providing a title, amount, and date, and then filter your expenses based on years for better financial insights.
+👉 [Click here](https://spendmatrix-expensetrackerapplication.pages.dev/)
 
 <img width="900px" loading="lazy" src="https://github.com/mayurisamanta/SpendMatrix-ExpenseTrackerApplication/blob/master/SpendMatrix/public/spendMatrix.jpeg?raw=true" alt="Image Description">
 
@@ -26,6 +26,13 @@ The SpendMatrix - Expense Tracker Application is a React-based web application t
 - **Expense Logging**: Easily add expenses with details such as date, title, and amount.
 - **Filtering**: Filter expenses by year to view and analyze spending for specific time periods.
 - **Data Visualization**: Visualize your spending habits through charts and graphs.
+
+# Technology used 
+
+- React
+- Git & GitHub
+- Vs code
+- CloudFlare
 
 # Getting Started
 
